@@ -1,0 +1,27 @@
+{
+  "name": "graphql-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattDizzle/graphql-server.git"
+  },
+  "keywords": [],
+  "author": "Matthew Rougely",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MattDizzle/graphql-server/issues"
+  },
+  "homepage": "https://github.com/MattDizzle/graphql-server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.11.0",
+    "graphql": "^15.4.0",
+    "nodemon": "^2.0.6"
+  }
+}

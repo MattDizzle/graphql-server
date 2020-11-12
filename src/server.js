@@ -1,6 +1,7 @@
 const express = require('express');
 const { graphqlHTTP } = require('express-graphql');
 const { buildSchema } = require('graphql');
+const morgan = require('morgan');
 
 const schema = buildSchema(`
     type Query {
@@ -41,6 +42,7 @@ var root = {
 }
 
 var app = express();
+app.use(morgan('combined'))
 app.use('/graphql', graphqlHTTP({
     schema: schema,
     rootValue: root,
@@ -48,3 +50,4 @@ app.use('/graphql', graphqlHTTP({
 }))
 app.listen(4000);
 console.log('Running a GraphQL API server at localhost:4000/graphql')
+
